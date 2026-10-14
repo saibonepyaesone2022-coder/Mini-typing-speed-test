@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Typing Speed Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+<header>
+    <h1>⌨️ Mini Typing Speed Test</h1>
+    <p>Test your typing speed and accuracy</p>
+</header>
+
+<section class="panel">
+
+    <div class="controls">
+
+        <div>
+            <label>Difficulty</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Text Length</label>
+            <select id="textLength">
+                <option value="short">Short</option>
+                <option value="medium" selected>Medium</option>
+                <option value="long">Long</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Time</label>
+            <select id="timeLimit">
+                <option value="30">30 Seconds</option>
+                <option value="60" selected>60 Seconds</option>
+                <option value="120">120 Seconds</option>
+            </select>
+        </div>
+
+        <div>
+            <label>&nbsp;</label>
+            <button id="newTest">🆕 New Test</button>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="panel">
+
+    <div class="stats">
+
+        <div class="stat">
+            <div class="label">WPM</div>
+            <div class="value" id="wpm">0</div>
+        </div>
+
+        <div class="stat">
+            <div class="label">Accuracy</div>
+            <div class="value" id="accuracy">100%</div>
+        </div>
+
+        <div class="stat">
+            <div class="label">Correct</div>
+            <div class="value" id="correct">0</div>
+        </div>
+
+        <div class="stat">
+            <div class="label">Errors</div>
+            <div class="value" id="errors">0</div>
+        </div>
+
+        <div class="stat">
+            <div class="label">Characters</div>
+            <div class="value" id="characters">0</div>
+        </div>
+
+    </div>
+
+    <div class="timer">
+        <div>Time Remaining</div>
+        <div class="timer-number" id="timer">60</div>
+    </div>
+
+    <div class="text-box" id="textDisplay"></div>
+
+    <textarea
+        id="typingInput"
+        placeholder="Start typing here..."
+        spellcheck="false"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+    ></textarea>
+
+    <div class="message" id="message"></div>
+
+    <div class="buttons">
+        <button id="restart" class="secondary">🔄 Restart</button>
+        <button id="finish" class="danger">⏹ Finish Test</button>
+    </div>
+
+    <div class="result" id="result">
+        <h2>🎉 Test Finished!</h2>
+
+        <div class="result-score" id="finalWpm">
+            0 WPM
+        </div>
+
+        <p id="finalDetails"></p>
+    </div>
+
+    <div class="best-score" id="bestScore">
+        🏆 Best Score: 0 WPM
+    </div>
+
+</section>
+
+<section class="panel">
+
+    <div class="history-header">
+        <h2>📊 Test History</h2>
+        <button id="clearHistory" class="danger">
+            Clear
+        </button>
+    </div>
+
+    <div id="historyList">
+        <p style="color:#64748b;">
+            No test history yet.
+        </p>
+    </div>
+</section>
+</div>
+<script src="script.js">
+    </script>
+</body>
+</html>
